@@ -26,10 +26,14 @@ window.addEventListener('load', () => {
 })
 
 function loadMusic(indexNumb) {
-    musicName.innerText = allMusic[indexNumb - 1].name
-    musicArtist.innerText = allMusic[indexNumb - 1].artist
-    musicImg.src = allMusic[indexNumb - 1].img ? `assets/img/${allMusic[indexNumb - 1].img}.jpeg` : ''
-    mainAudio.src = `assets/musics/${allMusic[indexNumb - 1].src}.mp3`
+    const music = allMusic[indexNumb - 1]
+    musicName.innerText = music.name
+    musicArtist.innerText = music.artist
+    musicImg.src = music.img || 'assets/img/default.jpg'
+    musicImg.onerror = () => {
+        musicImg.src = 'assets/img/default.jpg'
+    }
+    mainAudio.src = `assets/musics/${music.src}.mp3`
     mainAudio.load()
 }
 
