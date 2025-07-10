@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Music Player</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <button class="hdbtn">
+          <i class="fa-solid fa-arrow-left"></i>
+        </button>
+        <h3 class="p-now">Playing now</h3>
+        <button class="hdbtn">
+          <i class="fa-solid fa-list"></i>
+        </button>
+      </header>
+
+      <div class="player">
+        <div class="img-area">
+          <img src="" />
+        </div>
+
+        <div class="song-details">
+          <h1 class="name">Animation</h1>
+          <h3 class="artist">Coding</h3>
+        </div>
+
+        <div class="audioC">
+          <div class="song-timer">
+            <span class="current-time">0:00</span>
+            <span class="max-duration">0:00</span>
+          </div>
+
+          <div class="progress-area">
+            <div class="progress-bar">
+              <audio
+                id="main-audio"
+                src="assets/musics/Alan Walker - Me, Myself and The Night (Official Music Video).mp3"
+              ></audio>
+            </div>
+          </div>
+        </div>
+
+        <div class="controls">
+          <button class="btnC" id="prev">
+            <i class="fa-solid fa-backward"></i>
+          </button>
+
+          <button class="play-pause btnC">
+            <i class="fa-solid fa-play"></i>
+          </button>
+
+          <button class="btnC" id="next">
+            <i class="fa-solid fa-forward"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
